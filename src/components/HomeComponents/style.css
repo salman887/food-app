@@ -1,0 +1,35 @@
+.input::placeholder {
+    font: 15px sans-serif;
+    
+}
+.Dropdown-control{
+    border: none !important;
+    max-width: 30px !important;
+    min-width: 10px !important;
+    box-sizing:content-box !important
+}
+.carousel .thumbs{
+    display: none !important;
+}
+.carousel .slider-wrapper.axis-horizontal .slider .slide{
+    padding: 10px;
+}
+.carousel .carousel-status{
+    display: none !important;
+}
+.carousel .control-next.control-arrow:before{
+    display: none !important;
+}
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before{
+    display: none !important;
+
+}
+.carousel .control-dots .dot{
+    margin: 0px 3px !important;
+}
+.carousel .control-dots{
+    bottom: 7px;
+}
+.carousel .control-prev.control-arrow:before{
+    display: none o !important;
+}
