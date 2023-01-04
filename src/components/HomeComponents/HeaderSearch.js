@@ -6,6 +6,7 @@ import 'react-dropdown/style.css';
 import './style.css'; 
 
 
+
 // import 
 
 const options = [
@@ -13,7 +14,8 @@ const options = [
   ];
   const defaultOption = options[0];
 
-const HeaderSearch = () => {
+const HeaderSearch = ({img, dropDown}) => {
+
     return (
         <>
             <div style={{ display: 'flex', flexDireaction: 'row', height: '20px' , alignItems:'center', padding:'0px 10px'}}>
@@ -22,12 +24,13 @@ const HeaderSearch = () => {
                     <input className="input" style={{ border: 'none', width:'100%' , paddingLeft:'15px', alignSelf:'center'}} placeholder="Search Restaurant, Cuisine" />
 
                 </div>
-                <div style={{ width: '30%', display:'flex' }} >
+                {!img || !dropDown ? <div style={{ width: '30%', display:'flex' }} >
                 <Dropdown  options={options} onChange={() => {}} value={defaultOption} placeholder="Select an option" />
                 <img src={Map} alt="" style={{ heiht: '28.5px', width: '28.5px' }} />
-                </div>
+                </div> :null}
+               
             </div>
-            <hr class="solid" style={{margin:'10px 10px',}}/>
+            <hr class="solid" style={{marginTop:10}} />
         </>
     );
 }

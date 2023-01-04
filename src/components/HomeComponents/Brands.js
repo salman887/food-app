@@ -1,5 +1,6 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import FoodCard from "./FoodCard";
 import './style.css';
 const Branding = () => {
     const trendingImages = [
@@ -13,23 +14,7 @@ const Branding = () => {
         <>
             <div style={{ overflowX: 'auto', whiteSpace: 'nowrap', }}>
                 {trendingImages.map(item => (
-                    <div style={{
-                        borderTopRightRadius:10,
-                        borderTopLeftRadius:10,
-                         display: 'inline-block',height:'150px', marginRight:'10px', boxShadow: '0px 1px 0px 0px #000' ,
-                         paddingLeft:2
-                }}>
-                    <img src={item.img} alt=""
-                        style={{
-                            height: '70px',
-                            width: '120px',
-                            borderTopRightRadius:10,
-                            borderTopLeftRadius:10
-                        }} />
-                        <p style={{fontSize:'15px', margin:0, fontWeight:'600'}}>{item.name}</p>
-
-                        <p style={{fontSize:'12px',margin:0}}>{item.locatin}</p>
-                        </div>
+                    <FoodCard item={item}/>
                 ))}
             </div>
         </>

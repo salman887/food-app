@@ -7,6 +7,8 @@ import Trending from "../../components/HomeComponents/Trending";
 import useWindowDimensions from "../../utils/customHooks/useWindowDimensions";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Footer from '../../components/Footer'
+
 const HomeScreen = () => {
 
   const { width, } = useWindowDimensions()
@@ -34,7 +36,7 @@ const HomeScreen = () => {
         </Carousel>
         <h2 style={{ margin: '4px', color: '#686C6E' }}>New Brands</h2>
         <Branding />
-
+<Footer/>
       </div> : null
 
   );
