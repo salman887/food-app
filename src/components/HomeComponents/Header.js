@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Header = ({showback, heading, phone, cancel}) => {
+const Header = ({showback, heading, phone, cancel, heart, profile, noti}) => {
     const navigate = useNavigate();
 
     return (
@@ -31,9 +31,10 @@ const Header = ({showback, heading, phone, cancel}) => {
                    {!phone && 
                 <img src={Phone} style={{ width:'22px', marginRight:'8px'}} alt="logo" />
             }
-                <img src={Heart} style={{ width:'22px',  marginRight:'8px'}} alt="logo" />
-                <img src={Profile} style={{ width:'22px',  marginRight:'8px'}} alt="logo" />
-                <img src={Bell} style={{ width:'22px',  marginRight:'8px'}} alt="logo" /></>
+                {!heart && <img src={Heart} style={{ width:'22px',  marginRight:'8px'}} alt="logo" />}
+                {!profile &&<img src={Profile} style={{ width:'22px',  marginRight:'8px'}} alt="logo" />}
+                {!noti && <img src={Bell} style={{ width:'22px',  marginRight:'8px'}} alt="logo" />}
+                </>
             }
 
             </div>
