@@ -5,6 +5,7 @@ import useWindowDimensions from "../../utils/customHooks/useWindowDimensions";
 import Filter from '../../images/filter.svg'
 import Footer from '../../components/Footer'
 import {useNavigate } from 'react-router-dom';
+import './FoodandDrinks.css';
 
 
 
@@ -26,11 +27,11 @@ function FoodAndDrinks() {
 
     return (
         width <= 450 ?
-        <div style={{ padding: '0px 20px 10px 20px',  }}>
+        <div className="headstyle">
         <Header showback heading={"Food & Drinks"} phone />
             <HeaderSearch />
             
-            <div style={{ height:'100%', width:'100%'}}>
+            <div className="food_drinks">
                 <div style={{display:'flex', justifyContent:'space-around', marginTop:10}}>
             {filters.map((item,index)=> (
                 <div style={{ padding:'5px', border:'2px solid #000',display:'flex', backgroundColor:index === 0 ?'black':'white', alignItems:'center'}}  onClick={() => index === 0 && navigate('/filters') }>

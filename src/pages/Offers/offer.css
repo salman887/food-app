@@ -1,0 +1,119 @@
+.offerhead{ 
+    padding: 0px 10px;
+}
+
+.listhead{
+    display: flex;
+    justify-content: space-between;
+}
+
+.centerflex{ 
+    align-items: center;
+    display: flex;
+    height: 10px;
+}
+
+.firstplacesection{ 
+    font-size: 15px;
+    margin-top: 29px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.secondplacesection{
+    font-size: 15px;
+    margin-top: 29px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.firstsecbuttom{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-left: 5px;
+    font-weight: 600;
+    margin: 2px;
+}
+
+.foodanddrink{ 
+    width: 28px;
+}
+
+.listcenter{ 
+    align-items: center;
+    display: flex;
+    height: 10px;
+}
+
+.maploc{ 
+    width: 20px;
+    margin-top: 29px;
+}
+
+.plates{ height: 50px;
+    background-color: #fff;
+    width: 50px;
+    border-radius: 25px; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.waysection{ 
+    display: grid;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.placename{ 
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.placenamebuttom{ 
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -75px;
+    color: lightgray;
+}
+
+.detailsection{ 
+    padding: 10px;
+}
+
+.cityname{ 
+    font-size: 15px;
+    font-weight:600;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.arealoc{ 
+    font-size: 15px;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin: 5px 0px;
+}
+
+.distanceKm{ 
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif; 
+    margin: 0px;
+}
+
+.music{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin: 30px 0px 0px 0px;
+}
+.aboutmoresec{ 
+    font-size: 15px;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin: 5px 0px;
+    color: lightgray;
+}

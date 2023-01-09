@@ -9,6 +9,7 @@ import FoodAndDrink from '../../images/foodAndDrink.svg'
 import Info from '../../images/info.svg'
 import ArrowRight from '../../images/arrowRight.svg'
 import Progress_bar from "../../components/proressBar";
+import './offer.css'
 
 
 
@@ -20,7 +21,7 @@ function Offers() {
     const myStyle = {
         backgroundImage:
             "url('https://cdn.wallpapersafari.com/29/46/FkSD9l.jpg')",
-        height: '85vh',
+        height: '84vh',
         width: '100vw',
         fontSize: '50px',
         backgroundSize: 'cover',
@@ -31,7 +32,7 @@ function Offers() {
     return (
         width <= 450 ?
             <div>
-                <div style={{ padding: '0px 10px' }}>
+                <div className="offerhead">
                     <Header heading={'Offer'} phone showback profile noti />
                 </div>
                 <div style={myStyle}>
@@ -64,27 +65,27 @@ const Heading = ({ tab, setTab }) => {
 const OfferList = () => {
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{ alignItems: 'center', display: 'flex', height: '10px' }}>
+            <div className="listhead">
+                <div className="centerflex">
                     <Rating size={18} iconsCount={1} initialValue={1} />
-                    <span style={{ fontSize: '15px', marginTop: '29px', marginLeft: '5px', fontWeight: 'bold' }}>Broad Way</span>
+                    <span className="firstplacesection">Broad Way</span>
                 </div>
-                <div style={{ alignItems: 'center', display: 'flex', height: '10px', }}>
-                    <img src={Location} alt="" style={{ width: '20px', marginTop: '29px', }} />
-                    <span style={{ fontSize: '15px', marginTop: '29px', marginLeft: '5px', fontWeight: 'bold' }}>Broad Way</span>
+                <div className="listcenter">
+                    <img src={Location} alt="" className="maploc" />
+                    <span className="secondplacesection">Broad Way</span>
                 </div>
             </div>
-            <span style={{ fontSize: '14px', marginTop: '-10px', marginLeft: '5px', fontWeight: '600', margin: '2px' }}>Offer from karachi retail</span>
+            <span className="firstsecbuttom">Offer from karachi retail</span>
             <div style={{ display: 'flex' }}>
                 <div style={{ display: 'grid' }}>
-                    <div style={{ height: '50px', backgroundColor: '#fff', width: '50px', borderRadius: '25px', justifyContent: 'center', alignItems: 'center', display: 'flex', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19)' }} >
-                        <img src={FoodAndDrink} alt="" style={{ width: "28px" }} />
+                    <div className="plates" >
+                        <img src={FoodAndDrink} alt="" className="foodanddrink" />
                     </div>
                     <span class="verticalDivider" />
                 </div>
-                <div style={{ display: 'grid', alignItems: 'center', marginLeft: '15px', }}>
-                    <span style={{ fontSize: '15px', fontWeight: 'bold', marginBottom: '30px' }}>Broad Way</span>
-                    <span style={{ fontSize: '12px', fontWeight: '600', marginTop: '-75px', color: 'lightgray' }}>Offer from karachi retail</span>
+                <div className="waysection">
+                    <span className="placename">Broad Way</span>
+                    <span className="placenamebuttom">Offer from karachi retail</span>
                 </div>
             </div>
             <div style={{ display: 'flex' }}>
@@ -130,14 +131,14 @@ const OfferList = () => {
 
 const Details = () => {
     return (
-        <div style={{ padding: 10 }}>
-            <p style={{ fontSize: '15px', fontWeight: '600', fontFamily: 'sans-serif', margin: '0px' }}>KARACHI</p>
-            <p style={{ fontSize: '15px', fontWeight: '400', fontFamily: 'sans-serif', margin: '5px 0px' }}>Dolmen Mall, Clifton</p>
-            <p style={{ fontSize: '15px', fontWeight: '600', fontFamily: 'sans-serif', margin: '0px' }}>Distance: 0 KM</p>
+        <div className="detailsection">
+            <p className="cityname">KARACHI</p>
+            <p className="arealoc">Dolmen Mall, Clifton</p>
+            <p className="distanceKm">Distance: 0 KM</p>
 
             <div>
-                <p style={{ fontSize: '15px', fontWeight: '500', fontFamily: 'sans-serif', margin: '30px 0px 0px 0px' }}> Like Broadway Musical is an expression of feeling, thoughts and emotions, Broadway </p>
-                <p style={{ fontSize: '15px', fontWeight: '400', fontFamily: 'sans-serif', margin: '5px 0px', color: 'lightgray' }}> Show more</p>
+                <p className="music"> Like Broadway Musical is an expression of feeling, thoughts and emotions, Broadway </p>
+                <p className="aboutmoresec"> Show more</p>
             </div>
             <img src="https://miro.medium.com/max/1400/1*FbzQStUzSsLChBJE9108hg.png" alt="" style={{ width: '100%' }} />
             <p style={{ fontSize: '15px', fontWeight: '600', fontFamily: 'sans-serif', margin: '0px' }}>Addtional Details</p>

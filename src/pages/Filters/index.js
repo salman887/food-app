@@ -4,6 +4,7 @@ import ArrowDown from '../../images/dropdown.svg'
 import ArrowUp from '../../images/arrowUp.svg'
 import React, { useState } from "react";
 import HeaderSearch from "../../components/HomeComponents/HeaderSearch";
+import './index.css'
 
 
 function Filters() {
@@ -14,7 +15,7 @@ function Filters() {
 
     return (
         width <= 450 ?
-            <div style={{ padding: '0px 20px 10px 20px', }}>
+            <div className="filterheader">
                 <Header heading={showAll ? 'Food & drinks' : "Sort by & Filters"} cancel />
                 {showAll ? <hr class="solid" /> : null}
 
@@ -36,10 +37,9 @@ function Filters() {
 
                   </> : <ShowAll/>}
 
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100px' }}>
-                        <p style={{ marginTop: '5px', textDecoration: 'underline', color: 'blueviolet' }} onClick={() => setShowAll(false)}>Close All</p>
-                        <button style={{ marginLeft: 10, width: '30%', backgroundColor: 'red', borderRadius: 15, padding: '10px', border: 'none' }}>Done</button>
-
+                  <div className="filterfooter">
+                        <p className="closeAll" onClick={() => setShowAll(false)}>Close All</p>
+                        <button className="doneBtn">Done</button>
                     </div>
             </div>
             : null

@@ -1,0 +1,27 @@
+.closeAll {
+  margin-top: 5px;
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+.doneBtn {
+  margin-left: 10px;
+  width: 30%;
+  background-color: red;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+}
+
+.filterfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.filterheader{ 
+    padding: 0px 20px 10px 20px;
+}
+
+
