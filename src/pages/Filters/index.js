@@ -21,7 +21,7 @@ function Filters() {
 
                 {showAll ? <HeaderSearch img dropDown /> : null}
                 {!showAll ? <>
-                    <div style={{ display: 'flex', }}>
+                    <div style={{ display: 'flex', marginTop:'20px'}}>
                         {filterType.map((item, index) => (
                             <div style={{ border: '1px solid #000', display: 'flex', backgroundColor: index === 0 ? 'black' : 'white', alignItems: 'center' }} >
                                 <p style={{ fontSize: 10, margin: '3px 7px', color: index === 0 ? 'white' : 'black', padding: '5px 10px' }}>{item}</p>
@@ -75,7 +75,7 @@ const SortBy = () => {
     }
     return (
         <>
-            <p style={{ fontSize: 12, fontWeight: '600' }}>Sort By</p>
+            <p style={{ fontSize: 16, fontWeight: 'bold', marginBottom:'8px' }}>Sort By</p>
             <div onChange={onChangeValue}>
                 <input type="radio" value="nearest" name="location" /> Nearest <br />
                 <input type="radio" value="To-reated" name="location" /> Top Reated<br />
@@ -91,7 +91,7 @@ const OfferType = () => {
     }
     return (
         <>
-            <p style={{ fontSize: 12, fontWeight: '600' }}>Offer type</p>
+            <p style={{ fontSize: 16, fontWeight: 'bold', marginBottom:'8px' }}>Offer type</p>
             <div onChange={onChangeValue}>
                 <input type="radio" value="nearest" name="location" /> By one get one free <br />
                 <input type="radio" value="To-reated" name="location" /> Take away<br />
@@ -113,7 +113,7 @@ const FoodAndDrinks = ({ setShowAll }) => {
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'space-between' }} onClick={() => setOpen(!open)}>
-                <p style={{ fontSize: 12, fontWeight: '600' }}>Food & Drinks</p>
+                <p style={{ fontSize: '16px', fontWeight: 'bold', marginTop:'20px' }}>Food & Drinks</p>
                 <img src={open ? ArrowUp : ArrowDown} alt="" style={{ heiht: '10px', width: '10px' }} />
             </div>
             <hr class="solid" />
