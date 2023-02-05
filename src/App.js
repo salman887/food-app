@@ -4,19 +4,24 @@ import HomeScreen from './pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Filters from './pages/Filters';
 import Offers from './pages/Offers';
+import Login from './pages/Login/login';
+import SignUp from './pages/SignUp/signup';
 
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<HomeScreen />}/>
-        <Route  path="/foodAndDrinks" element={<FoodAndDrinks />} />
-        <Route  path="/filters" element={<Filters />} />
-        <Route path="/offers" element={<Offers/>}/>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/foodAndDrinks" element={<FoodAndDrinks />} />
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/signUp" element={<SignUp />} />
 
-    </Routes>
-  </BrowserRouter>
+        <Route path="/filters" element={<Filters />} />
+        <Route path="/offers" element={<Offers />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

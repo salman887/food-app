@@ -23,7 +23,7 @@ function Filters() {
                     <div style={{ display: 'flex', }}>
                         {filterType.map((item, index) => (
                             <div style={{ border: '1px solid #000', display: 'flex', backgroundColor: index === 0 ? 'black' : 'white', alignItems: 'center' }} >
-                                <p style={{ fontSize: 10, margin: '3px 7px', color: index === 0 ? 'white' : 'black', padding: '5px 10px' }}>{item}</p>
+                                <p style={{ fontSize: 12, fontWeight: 'bold', margin: '3px 7px', color: index === 0 ? 'white' : 'black', padding: '5px 10px' }}>{item}</p>
                             </div>
                         ))}
                     </div>
@@ -38,7 +38,7 @@ function Filters() {
 
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100px' }}>
                         <p style={{ marginTop: '5px', textDecoration: 'underline', color: 'blueviolet' }} onClick={() => setShowAll(false)}>Close All</p>
-                        <button style={{ marginLeft: 10, width: '30%', backgroundColor: 'red', borderRadius: 15, padding: '10px', border: 'none' }}>Done</button>
+                        <button style={{ marginLeft: 10, color: 'white', width: '30%', backgroundColor: '#E44f4b', borderRadius: 15, padding: '10px', border: 'none' }}>Done</button>
 
                     </div>
             </div>
@@ -75,7 +75,7 @@ const SortBy = () => {
     }
     return (
         <>
-            <p style={{ fontSize: 12, fontWeight: '600' }}>Sort By</p>
+            <p style={{ fontSize: 14, fontWeight: 'bold' }}>Sort by</p>
             <div onChange={onChangeValue}>
                 <input type="radio" value="nearest" name="location" /> Nearest <br />
                 <input type="radio" value="To-reated" name="location" /> Top Reated<br />
@@ -91,12 +91,13 @@ const OfferType = () => {
     }
     return (
         <>
-            <p style={{ fontSize: 12, fontWeight: '600' }}>Offer type</p>
+            <p style={{ fontSize: 14, fontWeight: 'bold' }}>Offer type</p>
             <div onChange={onChangeValue}>
-                <input type="radio" value="nearest" name="location" /> By one get one free <br />
-                <input type="radio" value="To-reated" name="location" /> Take away<br />
+                <input type="radio" value="nearest" name="location" /> Buy one get one free <br />
+                <input type="radio" value="To-reated" name="location" /> Take-away<br />
                 <input type="radio" value="new" name="location" /> New <br />
-                <input type="radio" value="To-reated" name="location" /> Online<br />
+                <input type="radio" value="new" name="location" /> Disount <br />
+                <input type="radio" value="To-reated" name="location" /> Dine-in<br />
                 <input type="radio" value="new" name="location" /> Delivery
             </div>
 
@@ -113,23 +114,24 @@ const FoodAndDrinks = ({ setShowAll }) => {
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'space-between' }} onClick={() => setOpen(!open)}>
-                <p style={{ fontSize: 12, fontWeight: '600' }}>Food & Drinks</p>
+                <p style={{ fontSize: 14, fontWeight: "bold",}}>Food & Drinks</p>
                 <img src={open ? ArrowUp : ArrowDown} alt="" style={{ heiht: '10px', width: '10px' }} />
             </div>
             <hr class="solid" />
 
             {open &&
                 <>
-                    <p style={{ fontSize: 12, fontWeight: '600' }}>Food ype</p>
+                    <p style={{ fontSize: 14, fontWeight: 'bold',}}>Food Type</p>
 
                     <div onChange={onChangeValue}>
-                        <input type="radio" value="nearest" name="location" /> By one get one free <br />
-                        <input type="radio" value="To-reated" name="location" /> Take away<br />
-                        <input type="radio" value="new" name="location" /> New <br />
-                        <input type="radio" value="To-reated" name="location" /> Online<br />
-                        <input type="radio" value="new" name="location" /> Delivery
+                        <input type="radio" value="nearest" name="location" /> Breakfast <br/>
+                        <input type="radio" value="To-reated" name="location" /> Chinese <br/>
+                        <input type="radio" value="new" name="location" /> Hi-Tea <br/>
+                        <input type="radio" value="To-reated" name="location" /> Biryani <br/>
+                        <input type="radio" value="new" name="location" /> Pizza <br/>
+                        <input type="radio" value="new" name="location" /> Dessert 
                     </div>
-                    <p onClick={() => setShowAll(true)} style={{ marginTop: '5px', textDecoration: 'underline', color: 'blueviolet' }}>show all</p>
+                    <p onClick={() => setShowAll(true)} style={{ marginTop: '5px', textDecoration: 'underline', color: 'blueviolet', }}>Show all</p>
                 </>
             }
 

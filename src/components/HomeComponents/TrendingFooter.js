@@ -59,7 +59,7 @@ const lowerArr = [{
 const TrendingFooter = () => {
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'center', }}>
+            <div style={{ display: 'flex', justifyContent: 'center', width:'103%' }}>
                 {upperArr.map(item => (
                     <div style={{ height: '70px', padding: 15 }} >
                         <div style={{ height: 70, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -69,7 +69,7 @@ const TrendingFooter = () => {
                     </div>
                 ))}
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop:'10px' }}>
                 {lowerArr.map(item => (
                     <div style={{ height: '70px', padding: 15, }} >
                         <div style={{ height: 70, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

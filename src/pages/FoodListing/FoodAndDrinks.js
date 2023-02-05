@@ -22,20 +22,20 @@ function FoodAndDrinks() {
         { img: 'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528', name: 'KFC pakistan', locatin: 'NationWide' , rating:0},
         { img: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80', name: 'KFC pakistan', locatin: 'NationWide', rating:2 }
     ]
-    const filters = ["Filter", 'top-rated', 'New', 'Delivery', 'Pizza', 'Cafe']
+    const filters = ["Filters", 'Top-rated', 'New', 'Delivery', 'Pizza', 'Cafe']
 
     return (
         width <= 450 ?
         <div style={{ padding: '0px 20px 10px 20px',  }}>
-        <Header showback heading={"Food & Drinks"} phone />
+        <Header showback heading={"Food & Drink"} phone />
             <HeaderSearch />
             
             <div style={{ height:'100%', width:'100%'}}>
                 <div style={{display:'flex', justifyContent:'space-around', marginTop:10}}>
             {filters.map((item,index)=> (
-                <div style={{ padding:'5px', border:'2px solid #000',display:'flex', backgroundColor:index === 0 ?'black':'white', alignItems:'center'}}  onClick={() => index === 0 && navigate('/filters') }>
+                <div style={{ padding:'5px', border:'2px solid #000', borderRadius: '5px' ,display:'flex', backgroundColor:index === 0 ?'black':'white', alignItems:'center'}}  onClick={() => index === 0 && navigate('/filters') }>
                     {index === 0 ? <img src={Filter} alt="" style={{height:'10px'}} />: null}
-                    <p style={{fontSize:10, margin:'3px 7px', color:index === 0 ?'white':'black'}}>{item}</p>
+                    <p style={{fontSize:10, fontWeight: 'bold', margin:'3px 7px', color:index === 0 ?'white':'black'}}>{item}</p>
                 </div>
             ))}
             </div> 

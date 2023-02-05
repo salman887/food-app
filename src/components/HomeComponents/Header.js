@@ -17,10 +17,10 @@ const Header = ({showback, heading, phone, cancel, heart, profile, noti}) => {
         <div style={{ display: 'flex', flexDireaction: 'row' , width:'100%'}}>
             <div style={{width: '70%', display:'flex', lineHeight: '30.49px', }}>
                 {!showback ? 
-            <h2 style={{ fontWeight: '400', fontSize: '28.82px',  }}>{!heading &&'Hello,'} </h2>
+            <h2 style={{ fontWeight: '400', fontSize: '21.82px',  }}>{!heading &&'Hello,'} </h2>
         :                 <img src={Back} style={{ width:'22px', marginRight:'8px'}} alt="logo" onClick={() => navigate(-1)} />    }
 
-            <h2 style={{ fontWeight: 'bold', fontSize: '28.82px', }}>{heading ||'Salman Nasir'}</h2>
+            <h2 style={{ fontWeight: 'bold', fontSize: '21.82px', }}>{heading ||'Salman Nasir'}</h2>
             </div>
             <div style={{ display: 'flex',alignItems:'center', justifyContent:'end', width:'30%' }}>
              
