@@ -1,51 +1,34 @@
 import './index.css'
 import React from 'react';
 import useWindowDimensions from '../../utils/customHooks/useWindowDimensions';
+import axios from 'axios';
 
 function Login() {
   const {width} = useWindowDimensions()
     const [userData, setUserData]= React.useState({email:'', password:''})
+
     function handleClick(){
+      const headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      }
         const login = "https://v3beta.vouch365.mobi/api/login/vouch365";
-        debugger
-        fetch(login, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            // include, *same-origin, omit
-            headers: {
-              'Content-Type': 'application/json',
-              // Accept:'*/*'
-            //   'Content-Type': 'application/x-www-form-urlencoded',
-            },
-          body: JSON.stringify({
-            email: userData.email,
-            password: userData.password,
-          
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-        debugger
-
-            // code here //
-            if (data.error) {
-              debugger
-              alert("Error Password or Username"); /*displays error message*/
-            } else {
-        /*opens the target page while Id & password matches*/
-            }
+        const data = {email: userData.email,
+          password: userData.password}
+        axios.post(login,data , headers)
+        .then(response =>{
+           console.log(response, "---------------->")
           })
-          .catch((err) => {
-        debugger
+        .catch(error => {
+            console.error('There was an error!', error);
+        }); 
 
-            console.log(err);
-          });        
     }
   return (
     width <= 450 ?
     <div class="font_style">
     <div class="model">
-     <form class="model content">
+     <div class="model content">
         <div class="pic">
             <h1>Sign In</h1>
         </div>
@@ -70,7 +53,7 @@ function Login() {
             <p>Don't have an account ?<a href="/signUp">Sign up</a></p>
         </lable>
         </div>
-     </form>
+     </div>
     </div>
 </div> : null
   );

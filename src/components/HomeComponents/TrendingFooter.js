@@ -1,7 +1,5 @@
 import React from "react";
-
 import FoodAndDrink from '../../images/foodAndDrink.svg'
-import Delivery from '../../images/delivery.svg'
 import retail from '../../images/retail.svg'
 import services from '../../images/services.svg'
 import spaAndSalon from '../../images/spaAndSalon.svg'
@@ -61,11 +59,13 @@ const TrendingFooter = () => {
         <>
             <div style={{ display: 'flex', justifyContent: 'center', width:'103%' }}>
                 {upperArr.map(item => (
-                    <div style={{ height: '70px', padding: 15 }} >
+                    <div style={{ height: '70px', padding: 15 }}  >
+                        <a href="/foodAndDrinks">
                         <div style={{ height: 70, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <img src={item.image} alt="" style={{ width: item.width }} />
                         </div>
                         <p style={{ fontSize: '11px', textAlign: 'center' }}>{item.name}</p>
+                        </a>
                     </div>
                 ))}
             </div>

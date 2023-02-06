@@ -40,7 +40,11 @@ function FoodAndDrinks() {
             ))}
             </div> 
                  {trendingImages.map(item => (
+                <a href="/offers">
+
                     <FoodCard item={item} imgWidth={width} imgHeight={'110px'} rating/>
+                </a>
+
                 ))}
              </div> 
              <Footer/>

@@ -1,5 +1,6 @@
 import './index.css'
 import React from 'react';
+import axios from 'axios';
 import useWindowDimensions from '../../utils/customHooks/useWindowDimensions';
 async function fetchCities(url = '', data = {}) {
     // Default options are marked with *
@@ -31,45 +32,32 @@ function SignUp() {
     function handleClick(){
         const login = "https://v3beta.vouch365.mobi/api/register/vouch365";
         const c_id = cities.find(item => item.name === userdata.city)
-        debugger
-        fetch(login, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            // include, *same-origin, omit
-            headers: {
-              'Content-Type': 'application/json',
-              Accept:'*/*'
-            //   'Content-Type': 'application/x-www-form-urlencoded',
-            },
-          body: JSON.stringify({
-            email: userdata.email,
+        const headers = {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        }
+          const data = { email: userdata.email,
             password: userdata.password,
             lname:userdata.lName,
             fname:userdata.fName,
             dob:userdata.dob,
             city_id:c_id.id,
             gender:userdata.gender,
-            phone:userdata.phone
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-            // code here //
-            if (data.error) {
-              alert("Error Password or Username"); /*displays error message*/
-            } else {
-        /*opens the target page while Id & password matches*/
-            }
-          })
-          .catch((err) => {
-            console.log(err);
-          });        
+            phone:userdata.phone}
+          axios.post(login,data , headers)
+          .then(response =>{
+             console.log(response, "---------------->")
+            })
+          .catch(error => {
+              console.error('There was an error!', error);
+          });
+            
     }
     return (
         width <=450 ?
         <div class="font_style">
             <div class="model">
-                <form class="model content">
+                <div class="model content">
                    
                     <div class="pic">
                     <img src='https://i.pinimg.com/originals/4e/95/ff/4e95ff2406e7914e70cbbba6dd9c51d2.jpg' height={70}/>
@@ -136,7 +124,7 @@ function SignUp() {
                             <p>Already have an account <a href="/login">Sign In</a></p>
                         </lable>
                     </div>
-                </form>
+                </div>
             </div>
 
 
