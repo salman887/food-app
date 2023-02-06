@@ -7,7 +7,6 @@ import services from '../../images/services.svg'
 import spaAndSalon from '../../images/spaAndSalon.svg'
 import healthAndFitness from '../../images/healthAndFitness.svg'
 import axios from 'axios';
-import { tokekn } from "../../App";
 
 
 

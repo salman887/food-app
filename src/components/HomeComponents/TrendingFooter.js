@@ -5,6 +5,9 @@ import services from '../../images/services.svg'
 import spaAndSalon from '../../images/spaAndSalon.svg'
 import healthAndFitness from '../../images/healthAndFitness.svg'
 import { Outlet, Link } from "react-router-dom";
+import axios from 'axios';
+import {  token } from "../../App";
+
 
 
 const upperArr = [{
@@ -64,7 +67,28 @@ const lowerArr = [{
 
 },]
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
+
 const TrendingFooter = () => {
+    const [data, setData] = React.useState([])
+    React.useEffect(() => {
+        const headers = {
+            'Content-Type': 'application/json',
+            Authorization:`Bearer ${token}`,
+
+          }
+            const login = "https://v3beta.vouch365.mobi/api/categories";
+         
+            axios.get(login , headers)
+            .then(response =>{
+                setData(response.data.data)
+               console.log(response, "---------------->")
+              })
+            .catch(error => {
+                console.error('There was an error!', error);
+            }); 
+    },[])
+    
     return (
         <>
             <div style={{ display: 'flex', justifyContent: 'center', width:'103%' }}>
